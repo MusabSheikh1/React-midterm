@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.main-area {
+    padding: 40px 20px;
+    min-height: 100vh;
+    background: #f4f6f9;
+}
+
+.top-area {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.top-area h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.top-area p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.items-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.item-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.item-card:hover {
+    transform: scale(1.03);
+}
+
+.item-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.item-card h3 {
+    font-size: 1rem;
+    color: #19c880;
+    margin-bottom: 10px;
+}
+
+.item-card .price {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.item-card button {
+    background: #19c880;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.item-card button:hover {
+    background: #149a65;
+}
+
+/* popup */
+.popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup.show {
+    display: flex;
+}
+
+.popup-box {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.popup-box img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.popup-box h2 {
+    margin-bottom: 15px;
+    color: #19c880;
+}
+
+.popup-box p {
+    margin: 8px 0;
+    color: #444;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .top-area h2 {
+        font-size: 1.6rem;
+    }
+
+    .item-card {
+        padding: 15px;
+    }
+}

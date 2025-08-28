@@ -1,0 +1,82 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    padding: 20px;
+}
+
+.box {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+
+.box h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.box input {
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.button {
+    padding: 12px;
+    background-color: #2575fc;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 1rem;
+}
+
+.box p {
+    margin-top: 10px;
+    color: #2575fc;
+    text-align: center;
+}
+
+.box p a {
+    color: #2575fc;
+    text-decoration: none;
+}
+
+
+@media (max-width: 600px) {
+    .box {
+        padding: 30px 20px;
+        max-width: 100%;
+    }
+
+    .box h2 {
+        font-size: 1.4rem;
+    }
+
+    .box input,
+    .button {
+        font-size: 0.95rem;
+        padding: 10px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .box {
+        max-width: 450px;
+    }
+}
