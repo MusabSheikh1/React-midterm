@@ -6,6 +6,10 @@ import Settings from "./Pages/Settings";
 import Contact from "./Pages/Contact";
 import Products from "./Pages/Products";
 import ProductDetails from "./Pages/ProductDetails";
+import Home from "./Pages/Home/Home.jsx";
+import About from "./Pages/About/About.jsx";
+
+
 import "./App.css";
 
 function App() {
