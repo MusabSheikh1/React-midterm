@@ -16,7 +16,7 @@ import "./App.css";
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/dashboard" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
