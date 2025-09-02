@@ -1,19 +1,38 @@
-import { Link } from 'react-router-dom';
-import '../Login/Login.css'
+import { Link } from "react-router-dom";
+import "./Signup.css";
 
-const Signup = () => {
+function Signup() {
     return (
-        <div className="container">
-            <form className="box">
-                <h2>Signup</h2>
-                <input type="text" placeholder="Name" required />
-                <input type="email" placeholder="Email" required />
-                <input type="password" placeholder="Password" required />
-                <Link to="/dashboard" className="button">Sign Up</Link>
-                <p>Already have an account?<Link to="/"> Login</Link></p>
-            </form>
+        <div className="signup-page">
+            <div className="signup-box">
+                <h2 className="signup-title">Sign Up</h2>
+                <p className="signup-text">Create a new account to get started.</p>
+
+                <form className="signup-form" onSubmit={(e) => e.preventDefault()}>
+                    <label className="signup-label">
+                        Full Name
+                        <input type="text" placeholder="Enter your full name" className="signup-input" />
+                    </label>
+
+                    <label className="signup-label">
+                        Email
+                        <input type="email" placeholder="Enter your email" className="signup-input" />
+                    </label>
+
+                    <label className="signup-label">
+                        Password
+                        <input type="password" placeholder="Create a password" className="signup-input" />
+                    </label>
+
+                    <button type="submit" className="signup-btn">Sign Up</button>
+                </form>
+
+                <p className="signup-footer">
+                    Already have an account? <Link to="/login">Login</Link>
+                </p>
+            </div>
         </div>
     );
-};
+}
 
 export default Signup;

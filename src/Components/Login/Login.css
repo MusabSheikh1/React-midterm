@@ -1,82 +1,143 @@
-.container {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.login-page {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
-    padding: 20px;
+    min-height: 100vh;
+    background: #f4f6f9;
 }
 
-.box {
-    background: white;
-    padding: 40px;
+.login-box {
+    background: #fff;
+    padding: 30px;
     border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
     width: 100%;
     max-width: 400px;
-    box-sizing: border-box;
+    text-align: center;
 }
 
-.box h2 {
+.login-title {
+    font-size: 2rem;
+    color: #19c880;
+    margin-bottom: 10px;
+}
+
+.login-text {
+    color: #666;
     margin-bottom: 20px;
-    text-align: center;
 }
 
-.box input {
-    margin: 10px 0;
-    padding: 12px;
-    border-radius: 6px;
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-label {
+    text-align: left;
+    font-weight: 500;
+    color: #444;
+}
+
+.login-input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
     border: 1px solid #ccc;
-    font-size: 1rem;
-}
-
-.button {
-    padding: 12px;
-    background-color: #2575fc;
-    border: none;
     border-radius: 6px;
-    color: white;
+    outline: none;
+    transition: 0.3s;
+}
+
+.login-input:focus {
+    border-color: #19c880;
+    box-shadow: 0 0 5px rgba(25, 200, 128, 0.3);
+}
+
+.login-btn {
+    background: #19c880;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
     cursor: pointer;
-    margin-top: 10px;
-    text-align: center;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background: #149a65;
+}
+
+.login-footer {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #444;
+}
+
+.login-footer a {
+    color: #19c880;
     text-decoration: none;
-    display: block;
-    font-size: 1rem;
+    font-weight: 500;
 }
 
-.box p {
-    margin-top: 10px;
-    color: #2575fc;
-    text-align: center;
-}
-
-.box p a {
-    color: #2575fc;
-    text-decoration: none;
-}
-
-
-@media (max-width: 600px) {
-    .box {
-        padding: 30px 20px;
-        max-width: 100%;
+@media (max-width: 768px) {
+    .login-box {
+        padding: 25px;
+        max-width: 90%;
     }
 
-    .box h2 {
-        font-size: 1.4rem;
+    .login-title {
+        font-size: 1.7rem;
     }
 
-    .box input,
-    .button {
-        font-size: 0.95rem;
+    .login-input {
+        padding: 9px;
+    }
+
+    .login-btn {
         padding: 10px;
+        font-size: 0.95rem;
     }
 }
 
-@media (min-width: 1024px) {
-    .box {
-        max-width: 450px;
+@media (max-width: 480px) {
+    .login-page {
+        padding: 20px;
+    }
+
+    .login-box {
+        padding: 20px;
+        max-width: 100%;
+        border-radius: 8px;
+    }
+
+    .login-title {
+        font-size: 1.5rem;
+    }
+
+    .login-text {
+        font-size: 0.9rem;
+    }
+
+    .login-input {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    .login-btn {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .login-footer {
+        font-size: 0.8rem;
     }
 }

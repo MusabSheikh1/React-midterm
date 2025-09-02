@@ -25,7 +25,7 @@ function Products() {
                         <img src={product.image} alt={product.title} />
                         <h3>{product.title}</h3>
                         <p className="price">${product.price}</p>
-                        <Link to={`/dashboard/products/${product.id}`}>
+                        <Link to={`/products/${product.id}`}>
                             <button>View Details</button>
                         </Link>
                     </div>

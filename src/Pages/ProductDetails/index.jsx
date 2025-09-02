@@ -20,7 +20,7 @@ function ProductDetails() {
     return (
         <div className="popup show">
             <div className="popup-box">
-                <span className="close" onClick={() => navigate("/dashboard/products")}>
+                <span className="close" onClick={() => navigate("/products")}>
                     &times;
                 </span>
                 <img src={product.image} alt={product.title} />

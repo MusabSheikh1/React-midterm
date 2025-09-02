@@ -6,23 +6,30 @@ function Sidebar() {
         <div className="sidebar">
             <h2 className="logo">🌟 MyApp</h2>
 
-            <NavLink to="/" className="nav-item">
+            <NavLink to="/home" className="nav-item">
                 🏠 Home
             </NavLink>
             <NavLink to="/about" className="nav-item">
                 ℹ️ About
             </NavLink>
-            <NavLink to="/dashboard/products" className="nav-item">
+            <NavLink to="/products" className="nav-item">
                 🛍️ Products
             </NavLink>
-            <NavLink to="/dashboard/contact" className="nav-item">
+            <NavLink to="/contact" className="nav-item">
                 📞 Contact
             </NavLink>
-            <NavLink to="/dashboard/settings" className="nav-item">
+            <NavLink to="/settings" className="nav-item">
                 ⚙️ Settings
+            </NavLink>
+            <NavLink to="/login" className="nav-item">
+                🔑 Login
+            </NavLink>
+            <NavLink to="/signup" className="nav-item">
+                ✨ Signup
             </NavLink>
         </div>
     );
 }
 
 export default Sidebar;
+
