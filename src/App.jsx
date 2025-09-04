@@ -15,7 +15,8 @@ function App() {
     <Routes>
 
       <Route path="/" element={<Dashboard />}>
-        <Route path="/" element={<Home />} />
+        <Route index element={<Home />} />
+        <Route path="home" element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="products" element={<Products />} />
         <Route path="products/:id" element={<ProductDetails />} />
@@ -29,6 +30,7 @@ function App() {
 }
 
 export default App;
+
 
 
 
