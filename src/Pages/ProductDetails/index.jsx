@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import "../Products/Products.css";
-
+import "./ProductDetails.css";
 
 function ProductDetails() {
     const { id } = useParams();
@@ -34,3 +33,4 @@ function ProductDetails() {
 }
 
 export default ProductDetails;
+

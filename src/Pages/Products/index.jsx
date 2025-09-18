@@ -1,9 +1,14 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Products.css";
+import { useDispatch } from "react-redux";
+import { openCart } from "../../redux/cartSlice";
+import CartDrawer from "../../Components/CartDrawer";
+
 
 function Products() {
     const [products, setProducts] = useState([]);
+    const dispatch = useDispatch();
 
     useEffect(() => {
         fetch("https://fakestoreapi.com/products")
@@ -25,13 +30,21 @@ function Products() {
                         <img src={product.image} alt={product.title} />
                         <h3>{product.title}</h3>
                         <p className="price">${product.price}</p>
-                        <Link to={`/products/${product.id}`}>
-                            <button>View Details</button>
-                        </Link>
+
+                        <div className="button-group">
+                            <Link to={`/products/${product.id}`}>
+                                <button className="btn view-btn">View Details</button>
+                            </Link>
+                            <button onClick={() => dispatch(openCart())} className="btn cart-btn">
+                                Add to Cart
+                            </button>
+                        </div>
                     </div>
                 ))}
-            </div>
-        </section>
+           
+            <CartDrawer />
+        </div>
+        </section >
     );
 }
 
